@@ -1,57 +1,32 @@
-# Task C1 — Input & Letter Grade
+# a) Input & Variables
 name = input("Enter student name: ")
 math = float(input("Enter Math grade: "))
 physics = float(input("Enter Physics grade: "))
 python_grade = float(input("Enter Python grade: "))
 
+# b) Calculations
 average = (math + physics + python_grade) / 3
+scholarship = 35000 if average >= 90 else 0
+gpa = average / 25
 
-# Letter grade
-if average >= 90:
-    letter = 'A'
-elif average >= 75:
-    letter = 'B'
-elif average >= 60:
-    letter = 'C'
-elif average >= 50:
-    letter = 'D'
-else:
-    letter = 'F'
-
-# Scholarship condition
-scholarship = average >= 90 and math >= 70 and physics >= 70 and python_grade >= 70
-
+# c) Formatted Output
 print("=" * 30)
-print("Student :", name.upper())
+print("    STUDENT REPORT CARD")
+print("=" * 30)
+
+print("Student :", name)
 print("Math :", math)
 print("Physics :", physics)
 print("Python :", python_grade)
+
 print("-" * 30)
-print("Average :", average)
-print("Letter grade :", letter)
-print("Scholarship :", scholarship)
+
+print("Average :", round(average, 2))
+print("GPA :", round(gpa, 2))
+print("Scholarship :", scholarship, "KZT")
+
 print("=" * 30)
 
-# Task C2 — Subject Feedback
-grades = [math, physics, python_grade]
-subjects = ['Math', 'Physics', 'Python']
-
-for i in range(3):
-    grade = grades[i]
-
-    if grade >= 90:
-        comment = 'Excellent'
-    elif grade >= 75:
-        comment = 'Good'
-    elif grade >= 60:
-        comment = 'Satisfactory'
-    else:
-        comment = 'Fail'
-
-    print(subjects[i], ":", grade, "→", comment)
-
-# Task C3 — Name Analysis
-print("\nName uppercase :", name.upper())
-print("Name lowercase :", name.lower())
-print("Name length :", len(name))
-print("Masked name :", name.replace(name[0], '*', 1))
+# d) Comparison
+print("Scholarship granted:", average >= 90)
+print("Perfect score:", average == 100)
