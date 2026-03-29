@@ -1,15 +1,15 @@
-# a) Input & Variables
+# Input 
 name = input("Enter student name: ")
 math = float(input("Enter Math grade: "))
 physics = float(input("Enter Physics grade: "))
 python_grade = float(input("Enter Python grade: "))
 
-# b) Calculations
+# Calculations
 average = (math + physics + python_grade) / 3
 scholarship = 35000 if average >= 90 else 0
 gpa = average / 25
 
-# c) Formatted Output
+# Output
 print("=" * 30)
 print("    STUDENT REPORT CARD")
 print("=" * 30)
@@ -27,6 +27,6 @@ print("Scholarship :", scholarship, "KZT")
 
 print("=" * 30)
 
-# d) Comparison
+# Comparison
 print("Scholarship granted:", average >= 90)
 print("Perfect score:", average == 100)
