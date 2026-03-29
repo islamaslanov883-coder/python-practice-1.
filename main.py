@@ -1,4 +1,4 @@
-# Task C1 — Input & Letter Grade
+# Input
 name = input("Enter student name: ")
 math = float(input("Enter Math grade: "))
 physics = float(input("Enter Physics grade: "))
@@ -6,7 +6,7 @@ python_grade = float(input("Enter Python grade: "))
 
 average = (math + physics + python_grade) / 3
 
-# Letter grade
+# grade
 if average >= 90:
     letter = 'A'
 elif average >= 75:
@@ -18,7 +18,7 @@ elif average >= 50:
 else:
     letter = 'F'
 
-# Scholarship condition
+#condition
 scholarship = average >= 90 and math >= 70 and physics >= 70 and python_grade >= 70
 
 print("=" * 30)
@@ -32,7 +32,7 @@ print("Letter grade :", letter)
 print("Scholarship :", scholarship)
 print("=" * 30)
 
-# Task C2 — Subject Feedback
+#Feedback
 grades = [math, physics, python_grade]
 subjects = ['Math', 'Physics', 'Python']
 
@@ -50,7 +50,7 @@ for i in range(3):
 
     print(subjects[i], ":", grade, "→", comment)
 
-# Task C3 — Name Analysis
+#Name
 print("\nName uppercase :", name.upper())
 print("Name lowercase :", name.lower())
 print("Name length :", len(name))
